@@ -32,8 +32,31 @@ java {
     }
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = "composite.pgarquivo.Teste"
+tasks.register<JavaExec>("pgarquivo") {
+    group = "application"
+    description = "Executa o item pgarquivo (dado como referência)"
+    mainClass.set("composite.pgarquivo.Teste")
+    classpath = sourceSets["main"].runtimeClasspath
 }
 
+// Custom task for the second application
+tasks.register<JavaExec>("categoria") {
+    group = "application"
+    description = "Executa o item 02.1"
+    mainClass.set("composite.categoria.Teste")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+tasks.register<JavaExec>("universidade") {
+    group = "application"
+    description = "Executa o item universidade (dado como referência)"
+    mainClass.set("composite.universidade.Teste")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+tasks.register<JavaExec>("portfolio") {
+    group = "application"
+    description = "Executa o item portfolio (dado como referência)"
+    mainClass.set("composite.portfolio.Teste")
+    classpath = sourceSets["main"].runtimeClasspath
+}

@@ -11,5 +11,4 @@ public class ArquivoSistema extends ArquivoAplicacao {
         super.tabular(nivel);
         System.out.println("ArquivoSistema: " + this.nome);
     }
-
 }
