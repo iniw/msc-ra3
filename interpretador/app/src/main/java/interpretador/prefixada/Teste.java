@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Teste {
     public static void execute() {
         ArrayList<Expressao> programa = new ArrayList<Expressao>();
-        ArrayList<Expressao> lf = new ArrayList<Expressao>();
         ArrayList<Expressao> la = new ArrayList<Expressao>();
         ArrayList<Expressao> ls = new ArrayList<Expressao>();
         ArrayList<Expressao> ld = new ArrayList<Expressao>();
@@ -26,8 +25,8 @@ public class Teste {
         Expressao v2 = new Variavel("v2", 100);
         programa.add(v2);
 
-        lf.add(n);
-        Expressao fat = new Fatorial(lf);
+        Expressao fat = new Fatorial(n);
+        programa.add(fat);
 
         la.add(c1);
         la.add(v1);

@@ -1,10 +1,11 @@
 package interpretador.prefixada;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Fatorial extends Operador {
-    public Fatorial(ArrayList<Expressao> elemento) {
-        super(elemento);
+    public Fatorial(Expressao elemento) {
+        super(new ArrayList<Expressao>(Arrays.asList(elemento)));
     }
 
     @Override

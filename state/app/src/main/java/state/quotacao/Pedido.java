@@ -1,7 +1,7 @@
 package state.quotacao;
 
 public class Pedido implements IPedido {
-    Estado estado;
+    Estado estado = new Estado();
 
     public String solicita() {
         if (estado.getClass() != Estado.class)
